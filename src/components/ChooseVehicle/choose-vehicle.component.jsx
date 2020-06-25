@@ -57,7 +57,7 @@ function ChooseVehicle(props) {
                       </span>
                     </div>
                   </div>
-                  <div className="van-details_container mt-4 mb-3 my-sm-0">
+                  <div className="van-details_container mt-2 mt-md-4 mb-3 my-sm-0">
                     <h5>Small Vans</h5>
                     <h6>For items that will fit in a car boot</h6>
                   </div>

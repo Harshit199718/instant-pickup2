@@ -61,11 +61,25 @@
 
 @media (max-width: 576px){
     .van-details{
-        flex-direction: column;
+        // flex-direction: column;
+        display: inline-flex!important;
+        width: 48%;
+    }
+
+    .choose-your-delivery-vehicle_container{
+        padding: 24px 10px!important;
+    }
+
+    .choose-your-delivery-vehicle_container .van-details:nth-child(2){
+        margin-right: 10px;
     }
 
     .van-details .van-img_container>img{
         width: 100%;
+    }
+
+    .van-details .van-img_container span{
+        font-size: .8em!important;
     }
 
     .van-details .van-img_container>div{
@@ -75,6 +89,32 @@
 
     .van-details .van-details_container{
         text-align: center;
-        padding: 0;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 380px){
+    .van-details .van-img_container span{
+        font-size: .6em!important;
+        margin: 0!important;
+        &:first-child{
+            margin-right: 3px!important;
+        }
+
+        &:last-child{
+            margin-left: 3px!important;
+        }
+    }
+
+    .van-details_container{
+        padding: 0 10px!important;
+    }
+
+    .van-details .van-details_container h5{
+        font-size: .9em!important;
+    }
+
+    .van-details .van-details_container h6{
+        font-size: .8em!important;
     }
 }

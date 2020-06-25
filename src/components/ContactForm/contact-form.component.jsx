@@ -6,7 +6,7 @@ function ContactForm(props) {
     return (
         
             <div className="pickup-details">
-              <h5 className={props.title=="PICK UP"?"pick-up-header":"droppoff-header"}>{props.title}Contact Details</h5>
+              <h5 className={props.title=="PICK UP"?"pick-up-header":"dropoff-header"}>{props.title}Contact Details</h5>
               <div className="pick-up-inputs inputs">
                 <div
                   className="input-for-name"

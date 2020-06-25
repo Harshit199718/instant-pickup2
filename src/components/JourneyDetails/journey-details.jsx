@@ -89,12 +89,12 @@ const MyInput = (props) => {
               x
             </span>
           ) : null}
-          <i class="fa fa-caret-down" aria-hidden="true"></i>
+          {/* <i class="fa fa-caret-down" aria-hidden="true"></i> */}
         </div>
       </div>
-      <div>
+      {/* <div>
         <span>+</span>
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -253,15 +253,28 @@ class JourneyDetails extends Component {
   };
 
   onSelected = (viewport, item) => {
+    var directions = new MapboxDirections({
+      accessToken: mapboxgl.accessToken,
+      unit: "metric",
+      profile: "mapbox/driving",
+    });
+    console.log(viewport,"viewport")
     this.setState({ viewport });
     pickupadd = item.place_name;
     startcord = item.geometry.coordinates;
+    directions.setOrigin(pickupadd)
   };
 
   onSelectedTwo = (viewport, item) => {
+    var directions = new MapboxDirections({
+      accessToken: mapboxgl.accessToken,
+      unit: "metric",
+      profile: "mapbox/driving",
+    });
     this.setState({ viewport });
     dropoffadd = item.place_name;
     endcord = item.geometry.coordinates;
+    directions.setDestination(dropoffadd)
   };
 
   componentDidMount() {
@@ -280,8 +293,8 @@ class JourneyDetails extends Component {
     map.addControl(directions, "top-left");
 
     map.on("load", function () {
-      directions.setOrigin(startcord);
-      directions.setDestination(endcord);
+      startcord.length&&directions.setOrigin(startcord);
+      endcord.length&&directions.setDestination(endcord);
     });
   }
 
@@ -541,12 +554,36 @@ class JourneyDetails extends Component {
                     onChange={this.handleDateChange}
                     style={{ border: "none" }}
                     autoFocus={false}
+                    disableClock={true}
+                    format="mm/dd/yyyy"
+                    dayPlaceholder="ASAP"
+                    monthPlaceholder=""
+                    yearPlaceholder=""
                   />
-                  <i class="fa fa-caret-down" aria-hidden="true"></i>
                 </div>
               </div>
             </div>
+
+            <div className="journey-time-range">
+      <h5 className="journey-time-range_header">Choose Time Range</h5>
+      <div className="date-container">
+      
+      <div className="time-range-container">
             <TimeRange />
+            <p className="time-line">
+          <span>6am</span>
+          <span>8am</span>
+          <span>10am</span>
+          <span>12am</span>
+          <span>2pm</span>
+          <span>4pm</span>
+          <span>6pm</span>
+          <span>8pm</span>
+        </p>
+        <p className="note">*Set a wider time interval to minimize costs.</p>
+      </div>
+    </div>
+    </div>
           </div>
           <ChooseVehicle />
 
@@ -575,11 +612,6 @@ class JourneyDetails extends Component {
               emailError={this.state.dropEmailError}
               mobileError={this.state.dropMobileError}
             />
-
-            <h5 className="add-proof text-right p-0 m-0">
-              ADD ADDITIONAL 'PROOF OF DROP CONTACT'
-              <i class="fa fa-plus-circle ml-2" aria-hidden="true"></i>
-            </h5>
           </div>
 
           <div className="additional-info_container">

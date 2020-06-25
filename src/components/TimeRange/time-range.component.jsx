@@ -1,33 +1,19 @@
 import React,{useState} from "react";
-// import InputRange from 'react-input-range'
+import InputRange from 'react-input-range'
 import './time-range.styles.scss'
+import 'react-input-range/lib/css/index.css'
 import Slider from 'react-rangeslider'
 
 function TimeRange() {
-    const [volume, setVolume] = useState(0)
+    const [range, setRange] = useState({min: 2, max: 10})
   return (
-    <div className="journey-time-range">
-      <h5 className="journey-time-range_header">Choose Time Range</h5>
-      <div className="time-range-container">
-        <Slider
-          value={volume}
-          orientation='horizontal'
-          onChange={(value) => setVolume(value)}
-          step='15'
-        />
-        <p className="time-line">
-          <span>6am</span>
-          <span>8am</span>
-          <span>10am</span>
-          <span>12am</span>
-          <span>2pm</span>
-          <span>4pm</span>
-          <span>6pm</span>
-          <span>8pm</span>
-        </p>
-        <p className="note">*Set a wider time interval to minimize costs.</p>
-      </div>
-    </div>
+          <InputRange
+            formatLabel={(value) => ``}
+        maxValue={20}
+        minValue={0}
+        value={range}
+        onChange={value => {
+          setRange(value)}} />
   );
 }
 

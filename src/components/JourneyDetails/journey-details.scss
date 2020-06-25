@@ -126,12 +126,14 @@
     background: #fff;
 }
 
-.journey-details_container .select + h5{
+.journey-details_container>h5{
     margin-bottom: 20px;
     font-size: 1em;
     text-align: right;
     opacity: 0.7;
     letter-spacing: 1px;
+    width: auto!important;
+    display: inline-block!important;
 }
 
 .journey-details_container .select + h4{
@@ -150,15 +152,12 @@
 
 .journey-details_container .select>div{
     display: flex;
-}
-
-.journey-details_container .select>div:first-child{
-    width: 85%;
+    width: 100%;
     position: relative;
 }
 
-.journey-details_container .select>div:first-child .fa-caret-down,
-.journey-details_container .select>div:first-child .delete-address{
+
+.journey-details_container .select>div .delete-address{
     width: 20px;
     height: 30px;
     position: absolute;
@@ -169,56 +168,40 @@
     color: #000;
 }
 
-.journey-details_container .select>div:first-child .delete-address{
+.journey-details_container .select>div .delete-address{
     right: 25px;
     cursor: pointer;
 }
 
-.journey-details_container .select>div:nth-child(2){
-    width: 15%;
-    border-left: 1px solid #888888;
-}
-
-.journey-details_container .select>div:first-child i{
+.journey-details_container .select>div i{
     display: inline-block;
-    width: 17.86%;
+    width: 15%;
     font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.journey-details_container .select:nth-child(6)>div:first-child>i{
+.journey-details_container .select:nth-child(6)>div>i{
     width: 12%;
 }
 
-.journey-details_container .select:nth-child(6)>div:first-child>div{
+.journey-details_container .select:nth-child(6)>div>div{
     width: 88%;
-}
-
-.journey-details_container .select>div:nth-child(2){
-    font-size: 34px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .journey-details_container .select:nth-child(6)>div{
     width: 100%!important;
 }
 
-.journey-details_container .select>div:first-child .enter-location{
-    width: 82.14%;
+.journey-details_container .select>div .enter-location{
+    width: 85%;
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-.journey-details_container .select:last-child>div:first-child .enter-location{
-    width: 85%;
-}
-
-.journey-details_container .select>div:first-child .enter-location h5{
+.journey-details_container .select>div .enter-location h5{
     height: 20px;
     margin-top: 13px;
     margin-left: 2px;
@@ -226,7 +209,7 @@
     font-weight: lighter;
 }
 
-.journey-details_container .select>div:first-child .enter-location input{
+.journey-details_container .select>div .enter-location input{
     width: 100%;
     height: calc(100% - 20px);
     height: 100%;
@@ -239,12 +222,12 @@
     background: none;
 }
 
-.journey-details_container .select>div:first-child .enter-location input::placeholder{
+.journey-details_container .select>div .enter-location input::placeholder{
     font-size: .8em;
     color: black;
 }
 
-.journey-details_container .select>div:first-child .enter-location select option:hover{
+.journey-details_container .select>div .enter-location select option:hover{
     border: none;
     outline: none;
 }
@@ -253,9 +236,9 @@
     display: none;
 }
 
-.journey-details_container .select>div:first-child i,
-.journey-details_container .select>div:first-child div h5,
-.journey-details_container .select>div:nth-child(2) span{
+.journey-details_container .select>div i,
+.journey-details_container .select>div div h5,
+.journey-details_container .select>div span{
     color: #8FAD28;
 }
 
@@ -268,7 +251,7 @@
     border: none!important;
 }
 
-.react-calendar__month-view__days button.react-calendar__month-view__days__day:hover,,
+.react-calendar__month-view__days button.react-calendar__month-view__days__day:hover,
 .react-calendar__month-view__days button.react-calendar__tile--active{
 background: #8FAD28;
 }
@@ -279,6 +262,10 @@ background: #8FAD28;
 
 .react-calendar__viewContainer{
     background: #fff;
+}
+
+.journey-time-range_header{
+    font-size: 1em!important;
 }
 
 .contact-details_container>div{
@@ -668,6 +655,21 @@ background: #8FAD28;
     .location-and-book-now_container .location_container{
         display: none;
     }
+
+    .summary-and-book-now_container .summary_container{
+        margin-bottom: 220px;
+    }
+
+    .book-now_container{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        padding: 20px 14px!important;
+        box-shadow: 0 -2px 10px #ddd;
+        z-index: 1000;
+    }
 }
 
 @media (max-width: 415px) {
@@ -711,3 +713,22 @@ background: #8FAD28;
         padding: 35px 14px;
     }
 }
+
+// dfghdfgffd
+.date-container {
+    display: flex;
+    flex-direction: column;
+    width: 52%;
+  
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+    border-radius: 5px;
+  
+    text-align: left;
+  }
+
+  .date-container .time-range-container{
+    width: 100%;
+    margin: 0;
+    padding: 0 16px;
+  }
