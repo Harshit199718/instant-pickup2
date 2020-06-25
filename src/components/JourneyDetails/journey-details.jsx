@@ -556,9 +556,6 @@ class JourneyDetails extends Component {
                     autoFocus={false}
                     disableClock={true}
                     format="mm/dd/yyyy"
-                    dayPlaceholder="ASAP"
-                    monthPlaceholder=""
-                    yearPlaceholder=""
                   />
                 </div>
               </div>
