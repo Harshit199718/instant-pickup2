@@ -555,7 +555,7 @@ class JourneyDetails extends Component {
                     style={{ border: "none" }}
                     autoFocus={false}
                     disableClock={true}
-                    format="mm/dd/yyyy"
+                    format="dd/MM/yyyy"
                   />
                 </div>
               </div>
