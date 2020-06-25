@@ -78,8 +78,16 @@
         width: 100%;
     }
 
+    .van-details .van-img_container>div:nth-child(2){
+        display: flex;
+        justify-content: center;
+    }
+
     .van-details .van-img_container span{
         font-size: .8em!important;
+        margin: 0!important;
+        padding: 4px!important;
+        margin: 4px!important;
     }
 
     .van-details .van-img_container>div{
@@ -90,6 +98,10 @@
     .van-details .van-details_container{
         text-align: center;
         padding: 0 20px;
+    }
+
+    .van-details_container{
+        padding: 0 10px!important;
     }
 }
 
