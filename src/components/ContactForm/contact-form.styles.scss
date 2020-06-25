@@ -1,0 +1,133 @@
+
+.contact-details_container>div:nth-child(3)>div:nth-child(2),
+.contact-details_container>div:nth-child(4)>div:nth-child(2){
+    background: #fff;
+    border: 1px solid #888888;
+}
+
+.contact-details_container>div:nth-child(3) .pick-up-header,
+.contact-details_container>div:nth-child(4) .dropoff-header{
+    font-size: 1em;
+}   
+
+.contact-details_container>div:nth-child(3) .inputs .input-for-name,
+.contact-details_container>div:nth-child(4) .inputs .input-for-name{
+    padding: 10px 20px;
+    border-bottom: 2px solid #DEDEDE;;
+}
+
+.contact-details_container>div:nth-child(3) .inputs .input-for-name label,
+.contact-details_container>div:nth-child(4) .inputs .input-for-name label,
+.contact-details_container>div:nth-child(3) .inputs .input-for-email-and-mobile label,
+.contact-details_container>div:nth-child(4) .inputs .input-for-email-and-mobile label{
+    color:#8FAD28;
+    display: block;
+    margin: 0;
+    font-size: .8em;
+    font-weight: 500;
+}
+
+.contact-details_container>div:nth-child(3) .inputs .input-for-name input,
+.contact-details_container>div:nth-child(3) .inputs .input-for-email-and-mobile input,
+.contact-details_container>div:nth-child(3) .inputs .input-for-email-and-mobile input:focus,
+.contact-details_container>div:nth-child(3) .inputs .input-for-name input:focus,
+.contact-details_container>div:nth-child(4) .inputs .input-for-name input,
+.contact-details_container>div:nth-child(4) .inputs .input-for-email-and-mobile input,
+.contact-details_container>div:nth-child(4) .inputs .input-for-email-and-mobile input:focus,
+.contact-details_container>div:nth-child(4) .inputs .input-for-name input:focus{
+    border: none;
+    outline: none;
+    padding: 0;
+    width: 100%;
+}
+
+.contact-details_container>div:nth-child(3) .inputs .input-for-name input::placeholder,
+.contact-details_container>div:nth-child(3) .inputs .input-for-email-and-mobile input::placeholder,
+.contact-details_container>div:nth-child(4) .inputs .input-for-name input::placeholder,
+.contact-details_container>div:nth-child(4) .inputs .input-for-email-and-mobile input::placeholder{
+    font-weight: 500;
+    font-size: .9em;
+}
+
+.input-for-email-and-mobile{
+    display: flex;
+}
+
+.input-for-email-and-mobile>div{
+    width: 50%;
+    padding: 10px 20px;
+}
+
+.input-for-email-and-mobile .input-for-mobile{
+    border-left: 2px solid #DEDEDE;
+}
+
+.input-for-email-and-mobile .input-for-mobile img{
+    width: 12px;
+    height: 20px;
+}
+
+.input-for-email-and-mobile .input-for-mobile span{
+    font-weight: 500;
+    opacity: 0.4;
+}
+
+.input-for-email-and-mobile .input-for-mobile input{
+    width: auto!important;
+    padding-left: 4px!important;
+}
+
+
+//Media queries
+
+@media (max-width: 768px){
+    .input-for-email-and-mobile{
+        flex-direction: column;
+    }
+    
+    .input-for-email-and-mobile>div{
+        width: 100%;
+    }
+
+    .input-for-email-and-mobile .input-for-email{
+        border-bottom: 2px solid #DEDEDE;
+    }
+
+    .input-for-email-and-mobile .input-for-mobile{
+        border: none;
+    }
+}
+
+@media (max-width: 576px){
+    .contact-details_container>div:nth-child(2) span{
+        margin-right: 5px!important;
+    }
+
+    .contact-details_container>div:nth-child(2) p{
+        width: 86%;
+    }
+
+    .inputs .input-for-email-and-mobile .input-for-mobile input{
+        width: 95%!important;
+    }
+
+    .contact-details_container .contact-details-header{
+        flex-direction: column;
+    }
+
+    .contact-details_container .contact-details-header span{
+        margin-top: 20px;
+    }
+
+    .contact-details_container .add-proof{
+        display: flex;
+        justify-content: space-between;
+        text-align: left!important;
+    }
+}
+
+@media (max-width: 380px){
+    .inputs .input-for-email-and-mobile .input-for-mobile input{
+        width: 92%!important;
+    }
+}

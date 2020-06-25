@@ -1,0 +1,85 @@
+.navbar {
+    margin-left: 10%;
+    overflow: hidden;
+    position: relative;
+}
+
+.nav-link {
+    margin-right: 34px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 67px;
+
+    text-decoration: none;
+
+    color: #FFFFFF;
+}
+
+.fa-bars{
+    font-size: 24px;
+    color: #fff;
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: -36px;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    z-index: 10000!important;
+}
+
+.navbar input[type = checkbox]{
+    position: absolute;
+    right: 10px;
+    top: -36px;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+input[type = checkbox]:checked{
+    background-color: black;
+}
+
+
+@media (max-width: 768px) {
+    .navbar{
+        width: 100vw;
+        margin: 0;
+        z-index: 10000;
+        height: 0;
+        padding: 0;
+        overflow: visible;
+    }
+
+    .nav-link{
+        width: 100%;
+        text-align: center;
+    }
+
+    .fa-bars{
+        display: inline-block;
+    }
+
+    .navbar input[type = checkbox]:checked ~ .navbar{
+        height: 50vh;
+    }
+
+    .nav-link{
+        display: none;
+    }
+
+    .visible{
+        display: block;
+    }
+
+    .hidden{
+        display: none;
+    }
+}
