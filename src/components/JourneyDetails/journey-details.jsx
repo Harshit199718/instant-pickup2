@@ -582,7 +582,7 @@ class JourneyDetails extends Component {
     </div>
     </div>
           </div>
-          <ChooseVehicle />
+          <ChooseVehicle/>
 
           <div className="contact-details_container">
             <h2 className="contact-details-header">Contact Details</h2>
@@ -683,7 +683,7 @@ class JourneyDetails extends Component {
               </div>
             </div>
             <div className="book-now_container">
-              <h2>$45.00</h2>
+              <h2>£45.00</h2>
               <button className="py-4" onClick={() => this.handleSubmit()}>
                 BOOK NOW
               </button>

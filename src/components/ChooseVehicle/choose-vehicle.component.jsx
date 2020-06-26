@@ -5,8 +5,8 @@ import van2 from "../../assets/images/van2.jpg";
 import './choose-vehicle.styles.scss'
 
 var vehicleArray = [
-    { id: 1, dimensions: "1.7x1.5x1.2", weight: "705", Img: van1 },
-    { id: 2, dimensions: "2.5x1.5x1.9", weight: "580", Img: van2 },
+    { id: 1, dimensions: "1.7x1.5x1.2", weight: "705", Img: van1, vanType:"Small Vans" },
+    { id: 2, dimensions: "2.5x1.5x1.9", weight: "580", Img: van2, vanType:"Medium Vans" },
   ];
 
 function ChooseVehicle(props) {
@@ -58,7 +58,7 @@ function ChooseVehicle(props) {
                     </div>
                   </div>
                   <div className="van-details_container mt-4 mb-3 my-sm-0">
-                    <h5>Small Vans</h5>
+                    <h5>{vehicle.vanType} </h5>
                     <h6>For items that will fit in a car boot</h6>
                   </div>
                 </div>
